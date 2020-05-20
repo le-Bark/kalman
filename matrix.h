@@ -15,6 +15,7 @@ public:
     uint32_t getColumns()const{return m_columns;};
 
     matrix& operator=(const matrix& a);
+    matrix& operator=(matrix_t * data);
     matrix& operator+=(const matrix& a);
     matrix& operator+=(matrix_t a);
     matrix operator+(const matrix& a)const;

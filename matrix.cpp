@@ -32,6 +32,13 @@ matrix& matrix::operator=(const matrix& a){
     return *this;
 }
 
+matrix& matrix::operator=(matrix_t * data){
+    for(uint32_t i = 0;i<m_columns*m_rows;i++){
+        m_data[i] = data[i];
+    }
+    return *this;
+}
+
 matrix& matrix::operator+=(const matrix& a){
     for(uint32_t i = 0; i<m_rows*m_columns;i++){
         m_data[i] += a.m_data[i];
